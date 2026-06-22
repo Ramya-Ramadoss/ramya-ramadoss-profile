@@ -4,7 +4,7 @@ import { profile } from '../data/profile';
 import { ChevronDown, Download } from 'lucide-react';
 import { ParticleNetwork } from './ParticleNetwork';
 import { GeometricAccents } from './GeometricAccents';
-import { NeuralSphere } from './NeuralSphere';
+import { ProfileAvatar } from './ProfileAvatar';
 
 export function Hero() {
   const [currentTagline, setCurrentTagline] = useState(0);
@@ -146,32 +146,14 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* RIGHT — neural sphere */}
+        {/* RIGHT — profile avatar with orbits */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.85 }}
+          initial={{ opacity: 0, scale: 0.88 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.3, ease: 'easeOut' }}
+          transition={{ duration: 1.1, delay: 0.35, ease: 'easeOut' }}
           className="hidden lg:flex flex-shrink-0 items-center justify-center"
-          style={{ width: 440, height: 440 }}
         >
-          <div className="relative w-full h-full">
-            <div
-              className="absolute inset-0 rounded-full"
-              style={{
-                background: 'radial-gradient(circle, rgba(211,145,176,0.08) 0%, transparent 60%)',
-                filter: 'blur(20px)',
-              }}
-            />
-            <NeuralSphere />
-            {/* Orbit ring */}
-            <div
-              className="absolute inset-0 rounded-full pointer-events-none"
-              style={{
-                border: '1px solid rgba(211,145,176,0.1)',
-                boxShadow: '0 0 40px rgba(211,145,176,0.05) inset',
-              }}
-            />
-          </div>
+          <ProfileAvatar />
         </motion.div>
       </div>
     </section>
