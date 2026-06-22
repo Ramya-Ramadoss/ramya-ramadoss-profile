@@ -1,6 +1,7 @@
 import React from 'react';
 import { profile } from '../data/profile';
 import { Sidebar } from '../components/Sidebar';
+import { CursorGlow } from '../components/CursorGlow';
 import { Hero } from '../components/Hero';
 import { About } from '../components/About';
 import { Skills } from '../components/Skills';
@@ -15,6 +16,7 @@ import { Contact } from '../components/Contact';
 export default function Portfolio() {
   return (
     <div className="bg-background text-foreground min-h-screen dark font-sans">
+      <CursorGlow />
       <Sidebar />
       <main className="ml-0 md:ml-20 overflow-x-hidden">
         <Hero />

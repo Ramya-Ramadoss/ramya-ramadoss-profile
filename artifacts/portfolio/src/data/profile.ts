@@ -57,25 +57,29 @@ export const profile = {
       title: "AI-Powered Hospital Liquid Waste Detection",
       description: "Autonomous Cleaning Robot Navigation System using advanced computer vision and SLAM for precise hospital environment mapping and waste detection.",
       tech: ["YOLOv8", "OpenCV", "ROS2", "Gazebo", "SLAM", "Python", "Deep RL"],
-      link: "#"
+      link: "#",
+      image: ""
     },
     {
       title: "Emergency Response Intelligence Dashboard",
       description: "Real-time analytical dashboard predicting and mapping emergency scenarios using historical and live data feeds.",
       tech: ["Python", "Pandas", "Streamlit", "Plotly", "Machine Learning"],
-      link: "#"
+      link: "#",
+      image: ""
     },
     {
       title: "StudySync",
       description: "Personalized study group matching platform utilizing collaborative filtering to connect students with complementary skills.",
       tech: ["React", "Node.js", "Express", "PostgreSQL"],
-      link: "#"
+      link: "#",
+      image: ""
     },
     {
       title: "AthleteX",
       description: "Sports training and performance tracker offering actionable insights and progress metrics for athletes.",
       tech: ["React", "PostgreSQL", "Node.js"],
-      link: "#"
+      link: "#",
+      image: ""
     }
   ],
   experience: [
