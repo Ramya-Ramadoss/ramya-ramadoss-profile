@@ -13,6 +13,7 @@ import { Research } from '../components/Research';
 import { Certifications } from '../components/Certifications';
 import { Achievements } from '../components/Achievements';
 import { Contact } from '../components/Contact';
+import { StatsBar } from '../components/StatsBar';
 
 export default function Portfolio() {
   return (
@@ -22,6 +23,7 @@ export default function Portfolio() {
       <Sidebar />
       <main className="ml-0 md:ml-20 overflow-x-hidden">
         <Hero />
+        <StatsBar />
         <About />
         <Skills />
         <Projects />
