@@ -100,3 +100,69 @@
     border: 1px solid rgba(211, 145, 176, 0.15);
   }
 }
+
+/* ── Ambient floating orbs ─────────────────────────────────── */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.orb-1 {
+  width: 520px; height: 520px;
+  top: 5%; left: -10%;
+  background: radial-gradient(circle, rgba(211,145,176,0.08) 0%, transparent 70%);
+  animation: orbDrift1 18s ease-in-out infinite alternate;
+}
+.orb-2 {
+  width: 420px; height: 420px;
+  top: 30%; right: -8%;
+  background: radial-gradient(circle, rgba(93,60,100,0.14) 0%, transparent 70%);
+  animation: orbDrift2 22s ease-in-out infinite alternate;
+}
+.orb-3 {
+  width: 360px; height: 360px;
+  top: 60%; left: 20%;
+  background: radial-gradient(circle, rgba(186,110,143,0.07) 0%, transparent 70%);
+  animation: orbDrift3 26s ease-in-out infinite alternate;
+}
+.orb-4 {
+  width: 300px; height: 300px;
+  bottom: 10%; right: 15%;
+  background: radial-gradient(circle, rgba(159,100,150,0.1) 0%, transparent 70%);
+  animation: orbDrift1 20s ease-in-out infinite alternate-reverse;
+}
+.orb-5 {
+  width: 250px; height: 250px;
+  top: 80%; left: 55%;
+  background: radial-gradient(circle, rgba(211,145,176,0.06) 0%, transparent 70%);
+  animation: orbDrift2 30s ease-in-out infinite alternate;
+}
+.orb-6 {
+  width: 200px; height: 200px;
+  top: 45%; left: 40%;
+  background: radial-gradient(circle, rgba(93,60,100,0.09) 0%, transparent 70%);
+  animation: orbDrift3 15s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes orbDrift1 {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  33%  { transform: translate(60px, -40px) scale(1.08); }
+  66%  { transform: translate(-30px, 70px) scale(0.95); }
+  100% { transform: translate(40px, 20px) scale(1.04); }
+}
+@keyframes orbDrift2 {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  40%  { transform: translate(-80px, 50px) scale(1.1); }
+  70%  { transform: translate(40px, -60px) scale(0.92); }
+  100% { transform: translate(-20px, 30px) scale(1.05); }
+}
+@keyframes orbDrift3 {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  30%  { transform: translate(50px, 80px) scale(1.06); }
+  60%  { transform: translate(-60px, -30px) scale(0.94); }
+  100% { transform: translate(30px, -50px) scale(1.03); }
+}

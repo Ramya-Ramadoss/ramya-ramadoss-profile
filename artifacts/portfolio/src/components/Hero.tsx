@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { profile } from '../data/profile';
 import { ChevronDown, Download } from 'lucide-react';
+import { ParticleNetwork } from './ParticleNetwork';
+import { GeometricAccents } from './GeometricAccents';
 
 export function Hero() {
   const [currentTagline, setCurrentTagline] = useState(0);
@@ -15,10 +17,22 @@ export function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-20 px-6">
-      {/* Background Effect */}
+      {/* Particle network canvas */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" style={{ animationDelay: "2s" }} />
+        <ParticleNetwork />
+      </div>
+
+      {/* Soft bloom orbs behind text */}
+      <div className="absolute inset-0 z-[1] pointer-events-none">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(211,145,176,0.09) 0%, transparent 65%)', filter: 'blur(40px)' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full animate-pulse"
+          style={{ background: 'radial-gradient(circle, rgba(93,60,100,0.18) 0%, transparent 70%)', filter: 'blur(60px)', animationDuration: '5s' }} />
+      </div>
+
+      {/* Geometric accent decorations */}
+      <div className="absolute inset-0 z-[1]">
+        <GeometricAccents />
       </div>
 
       <div className="z-10 text-center max-w-4xl mx-auto flex flex-col items-center">
