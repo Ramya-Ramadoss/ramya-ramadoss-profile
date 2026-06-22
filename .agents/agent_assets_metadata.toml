@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "nkyr-DvjvT0w4GNb5IXxr"
+uri = "file://Ramya_Ramadoss_Portfolio_Handoff.docx"
+type = "word_document"
+title = "Portfolio Handoff & Update Guide"
