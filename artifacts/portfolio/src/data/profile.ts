@@ -1,0 +1,113 @@
+export const profile = {
+  name: "Ramya Ramadoss",
+  taglines: [
+    "AI/ML Engineer",
+    "Software Developer",
+    "Data Analyst",
+    "Research Enthusiast",
+  ],
+  intro: "Building the future of artificial intelligence. Specialized in computer vision, autonomous systems, and data analytics. Crafting elegant solutions to complex problems.",
+  about: {
+    bio: "I am a Computer Science student at VIT Chennai with a deep passion for Artificial Intelligence and Machine Learning. My journey involves creating autonomous systems, analyzing complex data, and building scalable full-stack applications. I thrive at the intersection of research and practical engineering.",
+    traits: ["Analytical Thinker", "Problem Solver", "Continuous Learner", "Innovator"],
+    roadmap: [
+      { topic: "Advanced Deep Learning", progress: 80 },
+      { topic: "Autonomous Systems & ROS2", progress: 75 },
+      { full: false, topic: "Large Language Models", progress: 60 },
+      { topic: "Cloud Architecture", progress: 65 },
+    ]
+  },
+  skills: [
+    {
+      category: "Programming",
+      items: [
+        { name: "Python", value: 95 },
+        { name: "C++", value: 85 },
+        { name: "JavaScript/TypeScript", value: 90 },
+      ]
+    },
+    {
+      category: "AI / ML",
+      items: [
+        { name: "Computer Vision (YOLO, OpenCV)", value: 90 },
+        { name: "Deep Reinforcement Learning", value: 80 },
+        { name: "Machine Learning (Scikit-learn, Pandas)", value: 85 },
+        { name: "ROS2 & Gazebo", value: 75 },
+      ]
+    },
+    {
+      category: "Frontend & Backend",
+      items: [
+        { name: "React & Next.js", value: 90 },
+        { name: "Node.js & Express", value: 85 },
+        { name: "Streamlit", value: 80 },
+      ]
+    },
+    {
+      category: "Database & Cloud",
+      items: [
+        { name: "PostgreSQL", value: 85 },
+        { name: "Firebase", value: 80 },
+        { name: "AWS / Cloud Deployments", value: 70 },
+      ]
+    }
+  ],
+  projects: [
+    {
+      title: "AI-Powered Hospital Liquid Waste Detection",
+      description: "Autonomous Cleaning Robot Navigation System using advanced computer vision and SLAM for precise hospital environment mapping and waste detection.",
+      tech: ["YOLOv8", "OpenCV", "ROS2", "Gazebo", "SLAM", "Python", "Deep RL"],
+      link: "#"
+    },
+    {
+      title: "Emergency Response Intelligence Dashboard",
+      description: "Real-time analytical dashboard predicting and mapping emergency scenarios using historical and live data feeds.",
+      tech: ["Python", "Pandas", "Streamlit", "Plotly", "Machine Learning"],
+      link: "#"
+    },
+    {
+      title: "StudySync",
+      description: "Personalized study group matching platform utilizing collaborative filtering to connect students with complementary skills.",
+      tech: ["React", "Node.js", "Express", "PostgreSQL"],
+      link: "#"
+    },
+    {
+      title: "AthleteX",
+      description: "Sports training and performance tracker offering actionable insights and progress metrics for athletes.",
+      tech: ["React", "PostgreSQL", "Node.js"],
+      link: "#"
+    }
+  ],
+  experience: [
+    {
+      role: "AI/ML Intern",
+      company: "Hexaware Technologies",
+      period: "2024 - Present",
+      description: "Working on enterprise-scale AI solutions, optimizing machine learning models, and contributing to data infrastructure improvements."
+    }
+  ],
+  education: {
+    institution: "VIT Chennai",
+    degree: "B.Tech Computer Science and Engineering",
+    cgpa: "8.58",
+    graduation: "Expected 2028"
+  },
+  research: [
+    "AI", "ML", "Explainable AI", "Computer Vision", "Deep Learning", 
+    "Medical AI", "Healthcare AI", "Robotics", "LLMs", "Autonomous Systems"
+  ],
+  achievements: [
+    "Event Management Committee Lead",
+    "Open Source Programming Club Member",
+    "Reforge Community Member",
+    "Hackathon Participant",
+    "Technical Community Contributor"
+  ],
+  contact: {
+    email: "ramya@example.com",
+    linkedin: "https://linkedin.com",
+    github: "https://github.com",
+    leetcode: "https://leetcode.com",
+    location: "Chennai, Tamil Nadu, India"
+  }
+};

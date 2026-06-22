@@ -1,0 +1,553 @@
+# AI_RULES.md
+
+Version: 1.0
+
+Project: Portfolio Website
+
+Owner: Ramya Ramadoss
+
+Status: AI Implementation Rules
+
+---
+
+# 1. Purpose
+
+This document defines the mandatory rules that every AI coding assistant must follow while working on this repository.
+
+These rules override implementation preferences.
+
+If documentation and AI assumptions conflict,
+
+documentation always wins.
+
+---
+
+# 2. Primary Objective
+
+Build a premium production-quality portfolio website.
+
+The implementation should prioritize
+
+Quality
+
+↓
+
+Maintainability
+
+↓
+
+Performance
+
+↓
+
+Accessibility
+
+↓
+
+Consistency
+
+↓
+
+Scalability
+
+Never optimize only for speed of development.
+
+---
+
+# 3. Documentation Priority
+
+Before writing any code,
+
+read
+
+PROJECT_SPEC.md
+
+↓
+
+DESIGN_SYSTEM.md
+
+↓
+
+UI_UX_ARCHITECTURE.md
+
+↓
+
+MOTION_GRAPHICS_SYSTEM.md
+
+↓
+
+CONTENT_ARCHITECTURE.md
+
+↓
+
+DEVELOPER_BLUEPRINT.md
+
+↓
+
+AI_RULES.md
+
+↓
+
+IMPLEMENTATION_CHECKLIST.md
+
+Never implement features without understanding the documentation.
+
+---
+
+# 4. Technology Requirements
+
+Always use
+
+Next.js 15
+
+TypeScript
+
+Tailwind CSS
+
+Framer Motion
+
+GSAP
+
+Three.js
+
+React Three Fiber
+
+Drei
+
+React Hook Form
+
+Zod
+
+Lucide React
+
+Never replace these libraries without explicit approval.
+
+---
+
+# 5. Coding Principles
+
+Every implementation must be
+
+Modular
+
+Reusable
+
+Typed
+
+Readable
+
+Scalable
+
+Maintainable
+
+Production Ready
+
+---
+
+# 6. Never Do These
+
+Never use
+
+JavaScript when TypeScript is required.
+
+Never use inline styles.
+
+Never hardcode colors.
+
+Never hardcode spacing.
+
+Never duplicate components.
+
+Never duplicate logic.
+
+Never ignore TypeScript errors.
+
+Never disable ESLint rules to bypass issues.
+
+Never use placeholder text when documentation exists.
+
+Never leave TODOs in production code.
+
+---
+
+# 7. Component Rules
+
+Every component must
+
+Have one responsibility.
+
+Receive typed props.
+
+Be reusable.
+
+Avoid unnecessary state.
+
+Avoid duplicated logic.
+
+Use composition where appropriate.
+
+---
+
+# 8. Styling Rules
+
+Use Tailwind CSS.
+
+Use design tokens.
+
+Use centralized color definitions.
+
+Maintain consistent spacing.
+
+Avoid arbitrary pixel values.
+
+Never introduce inconsistent UI styles.
+
+---
+
+# 9. Animation Rules
+
+Use
+
+Framer Motion
+
+GSAP
+
+Three.js
+
+Only where appropriate.
+
+Animations must
+
+Improve UX.
+
+Support storytelling.
+
+Remain performant.
+
+Respect reduced motion.
+
+Never animate simply for decoration.
+
+---
+
+# 10. Three.js Rules
+
+Three.js should remain isolated.
+
+Scene logic belongs inside dedicated scene components.
+
+Never mix Three.js rendering with business logic.
+
+Lazy load heavy scenes.
+
+Dispose resources correctly.
+
+Maintain 60 FPS wherever possible.
+
+---
+# 11. Performance Rules
+
+Performance is a non-negotiable requirement.
+
+Target
+
+Performance Score
+
+95+
+
+Accessibility
+
+95+
+
+SEO
+
+100
+
+Best Practices
+
+95+
+
+AI must
+
+- Lazy load heavy components.
+- Lazy load Three.js scenes.
+- Optimize images.
+- Optimize fonts.
+- Use dynamic imports where appropriate.
+- Minimize JavaScript bundles.
+- Avoid unnecessary re-renders.
+- Memoize expensive computations only when beneficial.
+
+Never sacrifice maintainability for micro-optimizations.
+
+---
+
+# 12. Accessibility Rules
+
+Every feature must support accessibility.
+
+Requirements
+
+Semantic HTML
+
+↓
+
+Keyboard Navigation
+
+↓
+
+ARIA Labels
+
+↓
+
+Visible Focus States
+
+↓
+
+Alt Text
+
+↓
+
+Reduced Motion
+
+↓
+
+Proper Heading Order
+
+↓
+
+Accessible Forms
+
+Never remove accessibility features for visual reasons.
+
+---
+
+# 13. SEO Rules
+
+Every page must include
+
+Title
+
+↓
+
+Meta Description
+
+↓
+
+Canonical URL
+
+↓
+
+Open Graph
+
+↓
+
+Twitter Metadata
+
+↓
+
+Structured Data
+
+↓
+
+Robots.txt
+
+↓
+
+XML Sitemap
+
+AI should use the Next.js Metadata API.
+
+---
+
+# 14. Error Handling Rules
+
+Every async action must have
+
+Loading State
+
+↓
+
+Success State
+
+↓
+
+Error State
+
+↓
+
+Retry Option
+
+Never expose internal error messages to users.
+
+Provide helpful, user-friendly feedback.
+
+---
+
+# 15. Git Rules
+
+Commit frequently.
+
+Commit messages should follow Conventional Commits.
+
+Examples
+
+feat: add hero section
+
+fix: optimize particle animation
+
+refactor: simplify navigation component
+
+docs: update project specification
+
+style: improve spacing consistency
+
+Never commit broken code.
+
+---
+
+# 16. Documentation Rules
+
+Documentation is the source of truth.
+
+If implementation differs from documentation,
+
+update the documentation first.
+
+Never silently change requirements.
+
+Every major architectural decision should be reflected in the documentation.
+
+---
+
+# 17. Security Rules
+
+Never expose
+
+API Keys
+
+Tokens
+
+Secrets
+
+Environment Variables
+
+Credentials
+
+Use
+
+.env.local
+
+for all sensitive values.
+
+Validate all user inputs.
+
+Sanitize form data.
+
+Prevent spam submissions.
+
+---
+
+# 18. Deployment Rules
+
+Before deployment verify
+
+✓ Production build succeeds
+
+✓ TypeScript passes
+
+✓ ESLint passes
+
+✓ Responsive design verified
+
+✓ Lighthouse ≥95
+
+✓ No console errors
+
+✓ Images optimized
+
+✓ Metadata complete
+
+✓ Accessibility verified
+
+Deployment target
+
+Vercel
+
+---
+
+# 19. Definition of Done (AI)
+
+The implementation is complete only when
+
+✓ Every documented section exists.
+
+✓ UI matches the design system.
+
+✓ Motion follows the motion specification.
+
+✓ Content follows the content architecture.
+
+✓ Architecture follows the developer blueprint.
+
+✓ Accessibility requirements are met.
+
+✓ Performance targets are achieved.
+
+✓ Responsive behavior is verified.
+
+✓ Code is production-ready.
+
+---
+
+# 20. AI Behavior Contract
+
+The AI coding assistant agrees to the following principles.
+
+Always
+
+Read the documentation before implementing.
+
+Follow documented requirements.
+
+Write clean, maintainable code.
+
+Use reusable components.
+
+Prefer composition over duplication.
+
+Optimize for long-term maintainability.
+
+Respect accessibility.
+
+Optimize performance.
+
+Maintain consistency.
+
+Never
+
+Invent features not described in the documentation.
+
+Simplify the design without approval.
+
+Replace required technologies.
+
+Ignore performance.
+
+Ignore accessibility.
+
+Duplicate components.
+
+Introduce inconsistent styling.
+
+Bypass TypeScript or ESLint errors.
+
+---
+
+# End of Document
+
+This document defines the mandatory implementation rules for all AI coding assistants working on this repository.
+
+Compliance with these rules is required throughout development.
+
+END OF AI_RULES.md

@@ -1,0 +1,302 @@
+Use this as your master prompt for Replit AI, Bolt, Lovable, or any coding LLM.
+
+---
+
+# MASTER PROMPT
+
+I am building my personal portfolio website.
+
+I will provide multiple UI/UX reference images. Analyze **all** of them together and extract only the best ideas from each. Do **not** copy any design directly. Instead, create a unique, premium, modern portfolio that combines the strongest aspects of every reference while maintaining originality.
+
+The color palette from the attached reference image is my primary inspiration.
+
+Primary Color Palette:
+
+* #0C0420
+* #5D3C64
+* #7B466A
+* #9F6496
+* #D391B0
+* #BA6E8F
+
+Use these colors creatively with gradients, glassmorphism, depth, smooth animations, premium typography, and elegant spacing.
+
+As I provide more reference images, continue extracting the best ideas from all previous images instead of replacing them.
+
+Do not explain your design choices.
+Do not describe UI or UX decisions.
+Do not justify layouts.
+Simply build the best possible portfolio by combining inspiration from every reference.
+
+The website should feel like an award-winning portfolio suitable for an AI/ML Engineer, Researcher, and Software Developer.
+
+---
+
+## MY PROFILE CONTENT
+
+### Name
+
+Ramya Ramadoss
+
+### Tagline
+
+AI/ML Engineer • Software Developer • Data Analyst • Research Enthusiast
+
+### Short Introduction
+
+I am a Computer Science Engineering student at VIT Chennai with a passion for Artificial Intelligence, Machine Learning, Data Analytics, and Full Stack Development. I enjoy building intelligent systems that solve real-world problems through research, software engineering, and data-driven solutions. My goal is to create impactful AI applications that combine innovation, usability, and scalability.
+
+---
+
+## About Me
+
+I am currently pursuing B.Tech in Computer Science Engineering at VIT Chennai.
+
+My interests include:
+
+* Artificial Intelligence
+* Machine Learning
+* Deep Learning
+* Data Analytics
+* Computer Vision
+* Natural Language Processing
+* Robotics
+* Research
+* Full Stack Development
+* Cloud Technologies
+
+I enjoy learning new technologies, participating in hackathons, contributing to technical communities, and building practical projects that create real-world impact.
+
+---
+
+## Education
+
+**Vellore Institute of Technology, Chennai**
+
+Bachelor of Technology
+
+Computer Science Engineering
+
+CGPA: 8.58
+
+Expected Graduation: 2028
+
+---
+
+## Skills
+
+Programming Languages
+
+* Python
+* Java
+* C
+* C++
+* JavaScript
+* SQL
+
+Frontend
+
+* HTML
+* CSS
+* React
+* Tailwind CSS
+
+Backend
+
+* Node.js
+* Express.js
+
+Database
+
+* PostgreSQL
+* MongoDB
+
+AI / ML
+
+* TensorFlow
+* Scikit-learn
+* OpenCV
+* Pandas
+* NumPy
+
+Tools
+
+* Git
+* GitHub
+* Docker
+* Postman
+* VS Code
+* Jupyter Notebook
+* Streamlit
+
+Cloud
+
+* AWS
+
+---
+
+## Featured Projects
+
+### AI-Powered Hospital Liquid Waste Detection & Autonomous Cleaning Robot Navigation System
+
+An intelligent hospital safety system that detects liquid spills using computer vision, evaluates severity using reinforcement learning, and enables autonomous robot navigation using SLAM and ROS2.
+
+Technologies:
+
+YOLOv8
+
+OpenCV
+
+ROS2
+
+Gazebo
+
+SLAM
+
+Python
+
+Deep Reinforcement Learning
+
+---
+
+### Emergency Response Intelligence Dashboard
+
+A data analytics dashboard for analyzing emergency response incidents, identifying patterns, and generating actionable insights through interactive visualizations.
+
+Technologies:
+
+Python
+
+Pandas
+
+Streamlit
+
+Plotly
+
+Machine Learning
+
+---
+
+### StudySync
+
+A personalized study group matching platform that intelligently connects students based on subjects, schedules, and learning preferences.
+
+Technologies:
+
+React
+
+Node.js
+
+Express
+
+PostgreSQL
+
+---
+
+### AthleteX
+
+A sports training and performance tracking application that helps athletes monitor progress, analyze performance metrics, and visualize improvement over time.
+
+Technologies:
+
+React
+
+PostgreSQL
+
+Node.js
+
+---
+
+## Research Interests
+
+Artificial Intelligence
+
+Machine Learning
+
+Explainable AI
+
+Computer Vision
+
+Deep Learning
+
+Medical AI
+
+Healthcare AI
+
+Robotics
+
+Large Language Models
+
+Autonomous Systems
+
+---
+
+## Experience
+
+AI/ML Intern
+
+Hexaware Technologies
+
+Worked on AI, Machine Learning, software development, and intelligent application development while gaining practical industry experience.
+
+---
+
+## Leadership & Activities
+
+* Event Management Committee Lead
+* Open Source Programming Club Member
+* Reforge Community Member
+* Hackathon Participant
+* Technical Community Contributor
+
+---
+
+## Certifications
+
+Display all certifications dynamically as cards that can be updated easily in the future.
+
+---
+
+## Achievements
+
+Display achievements as expandable cards so more can be added later.
+
+---
+
+## Resume
+
+Provide a dedicated Resume section with a prominent Download Resume button.
+
+---
+
+## Contact Information
+
+Name:
+Ramya Ramadoss
+
+Email:
+(Use my email from the provided resume.)
+
+LinkedIn:
+(Use my LinkedIn profile.)
+
+GitHub:
+(Use my GitHub profile.)
+
+LeetCode:
+(Use my LeetCode profile.)
+
+Location:
+Chennai, Tamil Nadu, India
+
+---
+
+## Footer
+
+© 2026 Ramya Ramadoss
+
+Built with passion for Artificial Intelligence, Research, and Innovation.
+
+---
+
+Generate a complete production-ready portfolio using this content. Keep all profile information editable through a central data file (or CMS-like configuration) so future updates require changing content in only one place without modifying the website structure.
