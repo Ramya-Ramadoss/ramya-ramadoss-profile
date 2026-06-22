@@ -6,3 +6,9 @@ id = "nkyr-DvjvT0w4GNb5IXxr"
 uri = "file://Ramya_Ramadoss_Portfolio_Handoff.docx"
 type = "word_document"
 title = "Portfolio Handoff & Update Guide"
+
+[[outputs]]
+id = "ZA3ryUEc9ABn5XFkouwCB"
+uri = "file://Ramya_Portfolio_Deploy_Guide.docx"
+type = "word_document"
+title = "GitHub, Deployment & Post-Deploy Update Guide"
