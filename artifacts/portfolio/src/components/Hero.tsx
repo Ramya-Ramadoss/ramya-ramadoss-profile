@@ -71,9 +71,9 @@ export function Hero() {
           className="mb-6 relative"
         >
           {/* Ghost watermark text */}
-          <div className="absolute -left-2 -top-4 opacity-[0.035] select-none pointer-events-none leading-none">
+          <div className="absolute -left-2 -top-4 opacity-[0.045] select-none pointer-events-none leading-none">
             <span className="text-[8rem] md:text-[11rem] xl:text-[14rem] font-black text-primary tracking-tighter">
-              {profile.name.split(' ')[0]}
+              {profile.name.split(' ')[0].toUpperCase()}
             </span>
           </div>
           <h1 className="text-6xl md:text-8xl xl:text-[9rem] font-black tracking-tighter leading-[0.92] glow-text">
