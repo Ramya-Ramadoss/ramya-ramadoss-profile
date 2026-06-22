@@ -101,6 +101,63 @@
   }
 }
 
+/* ── Aurora background blobs ──────────────────────────────── */
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+.aurora-1 {
+  width: 70vw; height: 60vh;
+  top: -15%; left: -10%;
+  background: radial-gradient(ellipse, rgba(186,110,143,0.45) 0%, rgba(93,60,100,0.2) 50%, transparent 80%);
+  animation: aurora1 18s ease-in-out infinite alternate;
+}
+.aurora-2 {
+  width: 60vw; height: 70vh;
+  top: 20%; right: -15%;
+  background: radial-gradient(ellipse, rgba(93,60,100,0.5) 0%, rgba(159,100,150,0.2) 50%, transparent 80%);
+  animation: aurora2 22s ease-in-out infinite alternate;
+}
+.aurora-3 {
+  width: 55vw; height: 55vh;
+  bottom: -10%; left: 20%;
+  background: radial-gradient(ellipse, rgba(211,145,176,0.35) 0%, rgba(122,70,106,0.15) 55%, transparent 80%);
+  animation: aurora3 26s ease-in-out infinite alternate;
+}
+.aurora-4 {
+  width: 40vw; height: 40vh;
+  top: 40%; left: 30%;
+  background: radial-gradient(ellipse, rgba(159,100,150,0.3) 0%, transparent 70%);
+  animation: aurora1 14s ease-in-out infinite alternate-reverse;
+}
+.aurora-5 {
+  width: 35vw; height: 45vh;
+  top: 5%; right: 25%;
+  background: radial-gradient(ellipse, rgba(211,145,176,0.2) 0%, transparent 65%);
+  animation: aurora2 19s ease-in-out infinite alternate-reverse;
+}
+@keyframes aurora1 {
+  0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+  30%  { transform: translate(6vw, 4vh) scale(1.1) rotate(8deg); }
+  60%  { transform: translate(-4vw, 8vh) scale(0.95) rotate(-5deg); }
+  100% { transform: translate(8vw, -5vh) scale(1.08) rotate(12deg); }
+}
+@keyframes aurora2 {
+  0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+  35%  { transform: translate(-7vw, -5vh) scale(1.12) rotate(-10deg); }
+  65%  { transform: translate(5vw, 9vh) scale(0.93) rotate(6deg); }
+  100% { transform: translate(-5vw, 3vh) scale(1.06) rotate(-8deg); }
+}
+@keyframes aurora3 {
+  0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+  40%  { transform: translate(5vw, -6vh) scale(1.09) rotate(7deg); }
+  70%  { transform: translate(-6vw, -3vh) scale(0.97) rotate(-4deg); }
+  100% { transform: translate(3vw, 7vh) scale(1.04) rotate(10deg); }
+}
+
 /* ── Ambient floating orbs ─────────────────────────────────── */
 .orb {
   position: absolute;

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { profile } from '../data/profile';
 import { ChevronDown, Download } from 'lucide-react';
-import { ParticleNetwork } from './ParticleNetwork';
-import { GeometricAccents } from './GeometricAccents';
+import { AuroraBg } from './AuroraBg';
 import { ProfileAvatar } from './ProfileAvatar';
 
 export function Hero() {
@@ -18,22 +17,9 @@ export function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden py-20 px-6 md:px-12">
-      {/* Particle network canvas */}
+      {/* Aurora gradient mesh background */}
       <div className="absolute inset-0 z-0">
-        <ParticleNetwork />
-      </div>
-
-      {/* Soft bloom orbs behind text */}
-      <div className="absolute inset-0 z-[1] pointer-events-none">
-        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full"
-          style={{ background: 'radial-gradient(circle, rgba(211,145,176,0.07) 0%, transparent 65%)', filter: 'blur(50px)' }} />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full animate-pulse"
-          style={{ background: 'radial-gradient(circle, rgba(93,60,100,0.15) 0%, transparent 70%)', filter: 'blur(60px)', animationDuration: '5s' }} />
-      </div>
-
-      {/* Geometric accent decorations */}
-      <div className="absolute inset-0 z-[1]">
-        <GeometricAccents />
+        <AuroraBg />
       </div>
 
       {/* Two-column layout: text + neural sphere */}
