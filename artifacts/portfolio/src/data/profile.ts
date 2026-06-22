@@ -55,6 +55,8 @@ export const profile = {
   projects: [
     {
       title: "AI-Powered Hospital Liquid Waste Detection",
+      category: "Robotics & AI",
+      status: "completed" as const,
       description: "Autonomous Cleaning Robot Navigation System using advanced computer vision and SLAM for precise hospital environment mapping and waste detection.",
       tech: ["YOLOv8", "OpenCV", "ROS2", "Gazebo", "SLAM", "Python", "Deep RL"],
       link: "#",
@@ -62,6 +64,8 @@ export const profile = {
     },
     {
       title: "Emergency Response Intelligence Dashboard",
+      category: "Data Analytics",
+      status: "completed" as const,
       description: "Real-time analytical dashboard predicting and mapping emergency scenarios using historical and live data feeds.",
       tech: ["Python", "Pandas", "Streamlit", "Plotly", "Machine Learning"],
       link: "#",
@@ -69,6 +73,8 @@ export const profile = {
     },
     {
       title: "StudySync",
+      category: "Full Stack",
+      status: "completed" as const,
       description: "Personalized study group matching platform utilizing collaborative filtering to connect students with complementary skills.",
       tech: ["React", "Node.js", "Express", "PostgreSQL"],
       link: "#",
@@ -76,11 +82,39 @@ export const profile = {
     },
     {
       title: "AthleteX",
+      category: "Full Stack",
+      status: "ongoing" as const,
       description: "Sports training and performance tracker offering actionable insights and progress metrics for athletes.",
       tech: ["React", "PostgreSQL", "Node.js"],
       link: "#",
       image: ""
     }
+  ],
+  quotes: [
+    {
+      text: "The best way to predict the future is to invent it.",
+      author: "Alan Kay"
+    },
+    {
+      text: "Artificial intelligence is the new electricity.",
+      author: "Andrew Ng"
+    },
+    {
+      text: "In the middle of every difficulty lies opportunity.",
+      author: "Albert Einstein"
+    },
+    {
+      text: "Data is the new oil. It's valuable, but if unrefined it cannot really be used.",
+      author: "Clive Humby"
+    },
+    {
+      text: "The science of today is the technology of tomorrow.",
+      author: "Edward Teller"
+    },
+    {
+      text: "Machine intelligence is the last invention that humanity will ever need to make.",
+      author: "Nick Bostrom"
+    },
   ],
   experience: [
     {
@@ -97,7 +131,7 @@ export const profile = {
     graduation: "Expected 2028"
   },
   research: [
-    "AI", "ML", "Explainable AI", "Computer Vision", "Deep Learning", 
+    "AI", "ML", "Explainable AI", "Computer Vision", "Deep Learning",
     "Medical AI", "Healthcare AI", "Robotics", "LLMs", "Autonomous Systems"
   ],
   achievements: [

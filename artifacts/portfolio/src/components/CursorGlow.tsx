@@ -1,116 +1,104 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
 
 export function CursorGlow() {
-  const cursorX = useMotionValue(-200);
-  const cursorY = useMotionValue(-200);
-
-  const springConfig = { damping: 22, stiffness: 300, mass: 0.5 };
-  const springX = useSpring(cursorX, springConfig);
-  const springY = useSpring(cursorY, springConfig);
-
-  const trailConfig = { damping: 38, stiffness: 180, mass: 0.8 };
-  const trailX = useSpring(cursorX, trailConfig);
-  const trailY = useSpring(cursorY, trailConfig);
-
-  const [visible, setVisible] = useState(false);
-  const [trail, setTrail] = useState<{ x: number; y: number; id: number }[]>([]);
-  const trailRef = useRef(trail);
-  trailRef.current = trail;
-  const counterRef = useRef(0);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const points = useRef<{ x: number; y: number; t: number }[]>([]);
+  const rafRef = useRef<number>(0);
+  const visible = useRef(false);
 
   useEffect(() => {
-    const handleMove = (e: MouseEvent) => {
-      cursorX.set(e.clientX);
-      cursorY.set(e.clientY);
-      if (!visible) setVisible(true);
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
 
-      counterRef.current += 1;
-      const id = counterRef.current;
-      setTrail(prev => [...prev.slice(-14), { x: e.clientX, y: e.clientY, id }]);
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     };
+    resize();
+    window.addEventListener('resize', resize);
 
-    const handleLeave = () => setVisible(false);
-    const handleEnter = () => setVisible(true);
+    const handleMove = (e: MouseEvent) => {
+      visible.current = true;
+      points.current.push({ x: e.clientX, y: e.clientY, t: Date.now() });
+      if (points.current.length > 80) points.current.shift();
+    };
+    const handleLeave = () => { visible.current = false; };
+    const handleEnter = () => { visible.current = true; };
 
     window.addEventListener('mousemove', handleMove);
     document.addEventListener('mouseleave', handleLeave);
     document.addEventListener('mouseenter', handleEnter);
 
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (visible.current) {
+        const now = Date.now();
+        const maxAge = 700;
+        const pts = points.current.filter(p => now - p.t < maxAge);
+
+        if (pts.length > 1) {
+          for (let i = 1; i < pts.length; i++) {
+            const age = now - pts[i].t;
+            const progress = Math.pow(1 - age / maxAge, 1.4);
+            const alpha = progress * 0.72;
+            const width = progress * 7;
+
+            ctx.beginPath();
+            ctx.moveTo(pts[i - 1].x, pts[i - 1].y);
+            ctx.lineTo(pts[i].x, pts[i].y);
+            ctx.strokeStyle = `rgba(211,145,176,${alpha})`;
+            ctx.lineWidth = width;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.shadowColor = 'rgba(211,145,176,0.6)';
+            ctx.shadowBlur = width * 3;
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+          }
+        }
+
+        if (pts.length > 0) {
+          const last = pts[pts.length - 1];
+          const grd = ctx.createRadialGradient(last.x, last.y, 0, last.x, last.y, 18);
+          grd.addColorStop(0, 'rgba(211,145,176,1)');
+          grd.addColorStop(0.35, 'rgba(186,110,143,0.65)');
+          grd.addColorStop(1, 'rgba(159,100,150,0)');
+          ctx.beginPath();
+          ctx.arc(last.x, last.y, 18, 0, Math.PI * 2);
+          ctx.fillStyle = grd;
+          ctx.shadowColor = 'rgba(211,145,176,0.9)';
+          ctx.shadowBlur = 20;
+          ctx.fill();
+          ctx.shadowBlur = 0;
+
+          ctx.beginPath();
+          ctx.arc(last.x, last.y, 4, 0, Math.PI * 2);
+          ctx.fillStyle = '#D391B0';
+          ctx.fill();
+        }
+      }
+
+      rafRef.current = requestAnimationFrame(draw);
+    };
+    draw();
+
     return () => {
+      window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', handleMove);
       document.removeEventListener('mouseleave', handleLeave);
       document.removeEventListener('mouseenter', handleEnter);
+      cancelAnimationFrame(rafRef.current);
     };
-  }, [cursorX, cursorY, visible]);
-
-  if (!visible) return null;
+  }, []);
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-[9999]" aria-hidden="true">
-      {trail.map((point, i) => {
-        const age = trail.length - 1 - i;
-        const opacity = Math.max(0, (1 - age / trail.length) * 0.55);
-        const size = Math.max(2, (1 - age / trail.length) * 9);
-        return (
-          <div
-            key={point.id}
-            style={{
-              position: 'fixed',
-              left: point.x,
-              top: point.y,
-              width: size,
-              height: size,
-              borderRadius: '50%',
-              transform: 'translate(-50%, -50%)',
-              background: `radial-gradient(circle, rgba(211,145,176,${opacity}) 0%, rgba(186,110,143,${opacity * 0.5}) 60%, transparent 100%)`,
-              boxShadow: `0 0 ${size * 3}px ${size}px rgba(211,145,176,${opacity * 0.4})`,
-              transition: 'opacity 0.1s',
-              pointerEvents: 'none',
-            }}
-          />
-        );
-      })}
-
-      <motion.div
-        style={{
-          position: 'fixed',
-          left: trailX,
-          top: trailY,
-          translateX: '-50%',
-          translateY: '-50%',
-        }}
-      >
-        <div
-          style={{
-            width: 18,
-            height: 18,
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(211,145,176,0.25) 0%, transparent 70%)',
-            border: '1px solid rgba(211,145,176,0.2)',
-          }}
-        />
-      </motion.div>
-
-      <motion.div
-        style={{
-          position: 'fixed',
-          left: springX,
-          top: springY,
-          translateX: '-50%',
-          translateY: '-50%',
-        }}
-      >
-        <div
-          style={{
-            width: 8,
-            height: 8,
-            borderRadius: '50%',
-            background: '#D391B0',
-            boxShadow: '0 0 12px 4px rgba(211,145,176,0.9), 0 0 30px 8px rgba(186,110,143,0.45)',
-          }}
-        />
-      </motion.div>
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="pointer-events-none fixed inset-0 z-[9999]"
+      aria-hidden="true"
+    />
   );
 }

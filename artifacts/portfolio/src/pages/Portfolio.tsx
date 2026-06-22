@@ -14,6 +14,7 @@ import { Certifications } from '../components/Certifications';
 import { Achievements } from '../components/Achievements';
 import { Contact } from '../components/Contact';
 import { StatsBar } from '../components/StatsBar';
+import { Quotes } from '../components/Quotes';
 
 export default function Portfolio() {
   return (
@@ -32,6 +33,7 @@ export default function Portfolio() {
         <Research />
         <Certifications />
         <Achievements />
+        <Quotes />
         <Contact />
         <footer className="py-8 text-center border-t border-border/50 text-muted-foreground font-mono text-sm px-6">
           <p>© 2026 {profile.name} · Built with passion for Artificial Intelligence, Research, and Innovation.</p>
