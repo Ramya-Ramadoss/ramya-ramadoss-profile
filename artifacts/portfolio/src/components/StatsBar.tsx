@@ -1,12 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-
-const stats = [
-  { value: 4,    suffix: '',  label: 'Projects Built',   prefix: '' },
-  { value: 8.58, suffix: '',  label: 'CGPA at VIT',      prefix: '' },
-  { value: 10,   suffix: '+', label: 'Tech Skills',      prefix: '' },
-  { value: 1,    suffix: '',  label: 'Industry Internship', prefix: '' },
-];
+import { profile } from '../data/profile';
 
 function CountUp({ target, suffix, prefix, decimals = 0 }: { target: number; suffix: string; prefix: string; decimals?: number }) {
   const [count, setCount] = useState(0);
@@ -56,7 +50,7 @@ export function StatsBar() {
       />
 
       <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
-        {stats.map((s, i) => (
+        {profile.stats.map((s, i) => (
           <motion.div
             key={s.label}
             initial={{ opacity: 0, y: 24 }}

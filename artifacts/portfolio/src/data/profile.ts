@@ -141,11 +141,24 @@ export const profile = {
     "Hackathon Participant",
     "Technical Community Contributor"
   ],
+  stats: [
+    { value: 4,    suffix: '',  label: 'Projects Built',   prefix: '' },
+    { value: 8.58, suffix: '',  label: 'CGPA at VIT',      prefix: '' },
+    { value: 7,    suffix: '+', label: 'Programming Langs',prefix: '' },
+    { value: 6,    suffix: '',  label: 'Languages Known',  prefix: '' },
+  ],
+  certifications: [
+    { title: "German Language B1 Level", issuer: "Goethe-Institut", date: "Completed" },
+    { title: "Hindi Pandit Certification", issuer: "Dakshina Bharat Hindi Prachar Sabha", date: "Completed" },
+    { title: "AWS Cloud Practitioner", issuer: "Amazon Web Services", date: "Planned" },
+    { title: "Microsoft Azure AI Fundamentals", issuer: "Microsoft", date: "Planned" },
+    { title: "Google Data Analytics", issuer: "Google", date: "Planned" }
+  ],
   contact: {
-    email: "ramya@example.com",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    leetcode: "https://leetcode.com",
+    email: "hairamya57@gmail.com",
+    linkedin: "https://linkedin.com/in/ramya-ramadoss",
+    github: "https://github.com/Ramya-Ramadoss",
+    leetcode: "https://leetcode.com/Ramya-Ramadoss",
     location: "Chennai, Tamil Nadu, India"
   }
 };
